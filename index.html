@@ -11,34 +11,47 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
-<body ng-app="eshop">
-	<header></header>
+<body ng-app="eshop" ng-cloak>
 	<div class="container">
 
 		<div ng-view></div>
-
+	</div>
+	<div ng-controller="FooterHeaderController">
+		<footer ng-if= "footer()" >
+			<div class="container">
+				<div class="container">
+					<p class="text-muted text-center"> {{ navBarEnabled }}Place sticky footer content here.</p>
+				</div>
+			</div>
+		</footer>
 	</div>
 
-	<footer></footer>
 	<!-- Jquerry -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-	<!-- load angular via CDN -->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+		<!-- load angular via CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.js"></script>
 
-	<!-- Modules -->
-	<script type="text/javascript" src="app/app.js"></script>
-	<!-- Controllers -->
-	<script type="text/javascript" src="app/controllers/loginController.js"></script>
-	
-</body>
-</html>
+		<!-- Modules -->
+		<script type="text/javascript" src="app/app.js"></script>
+		<!-- Controllers -->
+		<script type="text/javascript" src="app/controllers/loginController.js"></script>
+		<script type="text/javascript" src="app/controllers/customersController.js"></script>
+		<script type="text/javascript" src="app/controllers/ordersController.js"></script>
+		<script type="text/javascript" src="app/controllers/customerOrdersController.js"></script>
+		<script type="text/javascript" src="app/controllers/footerHeaderController.js"></script>
+		<!-- Service -->
+		<script type="text/javascript" src="app/service/customersService.js"></script>
+	</body>
+	</html>

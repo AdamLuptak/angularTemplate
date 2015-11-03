@@ -4,7 +4,9 @@
 	margin-right: 0.8em;
 }
 
-.container{
-
-}
-
+	
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
+.ng-cloak, .x-ng-cloak,
+.ng-hide {
+    display: none !important;
+	}

@@ -1,4 +1,7 @@
+var test2 = 'tank';
 var eshopApp = angular.module('eshop',['ngRoute','ngResource']);
+
+
 
 //routes privider
 eshopApp.config(function($routeProvider){
@@ -10,7 +13,7 @@ eshopApp.config(function($routeProvider){
 		controller: 'LoginController'
 	})
 
-	.when('/customers',{
+	.when('/customers/:navBarChosser',{
 
 		templateUrl: 'view/customers.html',
 		controller: 'CustomersController'
@@ -18,14 +21,15 @@ eshopApp.config(function($routeProvider){
 
 	.when('/customerOrders/:customerID',{
 
-		templateUrl: 'view/customerOrders',
+		templateUrl: 'view/customerOrders.html',
 		controller: 'CustomerOrdersController'
 	})
 
-	.when('/customerOrders/orders',{
+	.when('/orders/:navBarChosser',{
 
 		templateUrl: 'view/orders.html',
 		controller: 'OrdersController'
 	})
 
 });
+

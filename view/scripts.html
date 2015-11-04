@@ -1,34 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>EshopExample</title>
-	<meta http-equiv="X-UA-Compatible" content="IE-Edge">
-	<meta charset="UTF-8"> 
-
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
-	<!-- Styles -->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-
-<body ng-app="eshop" ng-cloak>
-
-	<div class="container">
-		
-		<!-- header -->
-		<div ng-include="'view/header.html'"></div> 
-		<!-- body inside -->
-		<div ng-view></div>
-		<!-- footer -->
-		<div ng-include="'view/footer.html'"></div> 
-
-	</div>
-	
-	<!-- Jquerry -->
+<!-- Jquerry -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 
 	<!-- Latest compiled and minified JavaScript -->
@@ -51,5 +21,3 @@
 	<script type="text/javascript" src="app/controllers/footerHeaderController.js"></script>
 	<!-- Service -->
 	<script type="text/javascript" src="app/service/customersService.js"></script>
-</body>
-</html>

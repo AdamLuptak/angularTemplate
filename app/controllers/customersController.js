@@ -1,5 +1,5 @@
 //controler for customerControler
-eshopApp.controller('CustomersController',['$scope', 'customersService','$routeParams',function($scope, customersService,$routeParams) {
+    eshopApp.controller('CustomersController',['$scope', 'customersService','$routeParams', 'mySharedService',function($scope, customersService,$routeParams,mySharedService) {
    //I like to have an init() for controllers that need to perform some initialization. Keeps things in
     //one place...not required though especially in the simple example below
     init();
@@ -10,7 +10,10 @@ eshopApp.controller('CustomersController',['$scope', 'customersService','$routeP
 
     $scope.navBarChosser = $routeParams.navBarChosser;
     
+    
 
+    mySharedService.preForBrodcast('1','1','1', $scope.navBarChosser);
+    
     $scope.insertCustomer = function () {
         var firstName = $scope.newCustomer.firstName;
         var lastName = $scope.newCustomer.lastName;

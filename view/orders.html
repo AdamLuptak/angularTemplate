@@ -1,25 +1,5 @@
-<header >
-    <div>
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" ><img id="peopleImg" src="img/people.png"> 
-                        Customers</a>
-                    </div>
-                    <div>
-                        <ul class="nav navbar-nav">
-                            <li ng-class="{'active': navBarChosser  === '1'}"><a href="#/customers/1">Customers</a></li>
-                            <li ng-class="{'active': navBarChosser  === '2'}"><a href="#/orders/2">Orders</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-
-  <div class="row" ng-repeat="user in customers | orderBy:'lastName'">
-       <div class="col-md-12">
+ <div class="row" ng-repeat="user in customers | orderBy:'lastName'">
+     <div class="col-md-12">
         <div class="panel panel-primary filterable" >
             <div class="panel-heading">
             	<h3 class="panel-title">{{ user.firstName }} {{ user.lastName }}, {{ user.address }}, {{ user.city }} </h3>
@@ -47,4 +27,4 @@
             </table>
         </div>
     </div>
-	</div>
+</div>
